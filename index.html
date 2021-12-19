@@ -28,6 +28,108 @@
 	<script src="js/cnm.sb_pc.js"></script>
 	<script src="js/cnm.sb_mp.js"></script>
 	<script src="js/cnm.sb_copy.js"></script>
+	
+	<script>
+		var aaa= 0;
+		
+		function aWake()
+		{
+			setInterval(getTime,100);
+		}
+		function getTime()
+		{
+			var checkTime = function (i) {
+
+    if (i < 10) {
+
+        i = "0" + i;
+
+    }
+
+    return i;
+
+}
+			var date1 = "2022-1-10 00:00:00";
+			var mdt = new Date();
+			var date2 = mdt.getFullYear() + "-" + mdt.getMonth() + "-" + mdt.getDate() + " " + checkTime(mdt.getHours()) + ":" + checkTime(mdt.getMinutes()) + ":" +checkTime(mdt.getSeconds());
+			//alert(mdt.getFullYear() + "-" + mdt.getMonth() + "-" + mdt.getDate() + " " + checkTime(mdt.getHours) + ":" + checkTime(mdt.getMinutes) + ":" +checkTime(mdt.getSeconds));
+			date1 = Date.parse(date1);
+    		date2 = Date.parse(date2);
+    		var ms= Math.abs(date2 - date1);
+			var s = Math.floor(ms/1000);
+			var min = Math.floor(s/60);
+			var hour = Math.floor(min/60)
+    		var days = Math.floor(hour/24);
+    		//return days ;
+			
+			var myt = document.getElementById("myt");
+			var ttime = new Date(ms);
+			var h = ttime.getHours - ttime.getDay*24;
+			var m = ttime.getMinutes - ttime.getDay*24*60 - h*60;
+			var ss = ttime.getSeconds - ttime.getDay*24*3600 - h*3600 - m*60;
+			myt.innerHTML = ttime.getDate() + "天" + ttime.getHours() + "小时" + ttime.getMinutes() + "分钟" + ttime.getSeconds() + "秒";
+			//alert(days.toString());
+		}
+		function formatDate (now) {
+      var date = new Date(now)
+      var y = date.getFullYear() // 年份
+      var m = date.getMonth() + 1 // 月份，注意：js里的月要加1
+      if(m<10){
+        m="0"+m;
+      }
+      var d = date.getDate() // 日
+      if(d<10){
+        d="0"+d;
+      }
+      var h = date.getHours() // 小时
+      if(h<10){
+        h="0"+h;
+      }
+      var min = date.getMinutes() // 分钟
+      if(min<10){
+        min="0"+min;
+      }
+      var s = date.getSeconds() // 秒
+      if(s<10){
+        s="0"+s;
+      }
+      // 返回值，根据自己需求调整，现在已经拿到了年月日时分秒了
+      return d + "天" + h + "小时" + min + "分钟" + s +"秒"
+    }
+		function today(){
+    		var today=new Date();
+    		var str="";
+    		str+=today.getFullYear()+"-";
+			var month=today.getMonth()+1;//返回值是 0（一月） 到 11（十二月） 之间的一个整数。
+			if(month<10){
+        		str+="0";
+    		}
+    		str+=month+"-";
+    		var day=today.getDate();//返回值是 1 ~ 31 之间的一个整数
+    		if(day<10){
+        		str+="0";
+    		}
+    		str+=day + " "
+			var hour=today.getHours();//返回值是 1 ~ 31 之间的一个整数
+    		if(hour<10){
+        		str+="0";
+    		}
+			str += hour + ":"
+			var min=today.getMinutes();//返回值是 1 ~ 31 之间的一个整数
+    		if(min<10){
+        		str+="0";
+    		}
+			str += min + ":"
+			var sec=today.getSeconds();//返回值是 1 ~ 31 之间的一个整数
+    		if(sec<10){
+        		str+="0";
+    		}
+			str += sec
+    		return str;
+		}
+		// = aWake;
+		window.onpageshow = aWake;
+	</script>
 
 </head>
 
@@ -89,7 +191,9 @@
 							<p>邮箱:329125460@qq.com</p>
 						</div>
 						<div class="nav01_fpw">
-							<p>胡载霆，一起加油！！</p>
+							<h5>期末倒计时: &nbsp;</h5>
+							<h5 id="myt"></h5>
+							<p>载霆，一起加油！！</p>
 						</div>
 					</div>
 					<!-- 版权信息，可修改,可删除,不强求 -->
@@ -718,7 +822,7 @@
 		<div id="ebga"></div>
 
 		<!-- 背景飘落 -->
-		<div id="xuna"></div>
+		<div id="xuna" ></div>
 		<script src="js/cnm.sb_bg.js"></script>
 	</div>
 
