@@ -38,17 +38,7 @@
 		}
 		function getTime()
 		{
-			var checkTime = function (i) {
 
-    if (i < 10) {
-
-        i = "0" + i;
-
-    }
-
-    return i;
-
-			}
 			var date1 = new Date("2022/01/11 00:00:00");
 			var mdt = new Date();//date2 = mdt.getFullYear() + "-" + mdt.getMonth() + "-" + mdt.getDate() + " " + checkTime(mdt.getHours()) + ":" + checkTime(mdt.getMinutes()) + ":" +checkTime(mdt.getSeconds());
 			//alert(mdt.getFullYear() + "-" + mdt.getMonth() + "-" + mdt.getDate() + " " + checkTime(mdt.getHours) + ":" + checkTime(mdt.getMinutes) + ":" +checkTime(mdt.getSeconds));
@@ -121,12 +111,6 @@
 		}
 		// = aWake;
 		
-		function playGs()
-		{
-	WWW a = new WWW ("新建文件夹/index.html");
-	Application.OpenURL (a.url);
-}
-		}
 		
 		window.onpageshow = aWake;
 	</script>
