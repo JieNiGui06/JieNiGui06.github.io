@@ -48,26 +48,18 @@
 
     return i;
 
-}
-			var date1 = "2022-1-10 00:00:00";
-			var mdt = new Date();
-			var date2 = mdt.getFullYear() + "-" + mdt.getMonth() + "-" + mdt.getDate() + " " + checkTime(mdt.getHours()) + ":" + checkTime(mdt.getMinutes()) + ":" +checkTime(mdt.getSeconds());
+			}
+			var date1 = new Date("2022/01/11 00:00:00");
+			var mdt = new Date();//date2 = mdt.getFullYear() + "-" + mdt.getMonth() + "-" + mdt.getDate() + " " + checkTime(mdt.getHours()) + ":" + checkTime(mdt.getMinutes()) + ":" +checkTime(mdt.getSeconds());
 			//alert(mdt.getFullYear() + "-" + mdt.getMonth() + "-" + mdt.getDate() + " " + checkTime(mdt.getHours) + ":" + checkTime(mdt.getMinutes) + ":" +checkTime(mdt.getSeconds));
-			date1 = Date.parse(date1);
-    		date2 = Date.parse(date2);
-    		var ms= Math.abs(date2 - date1);
-			var s = Math.floor(ms/1000);
-			var min = Math.floor(s/60);
-			var hour = Math.floor(min/60)
-    		var days = Math.floor(hour/24);
+			
+			//date2 = Date.parse(date2);
+			var ms = Math.abs(mdt.getTime() - date1.getTime());
     		//return days ;
 			
 			var myt = document.getElementById("myt");
 			var ttime = new Date(ms);
-			var h = ttime.getHours - ttime.getDay*24;
-			var m = ttime.getMinutes - ttime.getDay*24*60 - h*60;
-			var ss = ttime.getSeconds - ttime.getDay*24*3600 - h*3600 - m*60;
-			myt.innerHTML = ttime.getDate() + "天" + ttime.getHours() + "小时" + ttime.getMinutes() + "分钟" + ttime.getSeconds() + "秒";
+            myt.innerHTML = ttime.getUTCDate() - 1 + "天" + ttime.getUTCHours() + "小时" + ttime.getUTCMinutes() + "分钟" + ttime.getUTCSeconds() + "秒";
 			//alert(days.toString());
 		}
 		function formatDate (now) {
