@@ -31,11 +31,95 @@
 	
 	<script>
 		var aaa= 0;
-		
+		var backnum = 1;
+		var op = 0;
+		var mytmpOBJ;
+		var myparents;
 		function aWake()
 		{
-			setInterval(getTime,100);
+			mytmpOBJ = document.getElementById("nav001");
+			myparents = document.getElementById("nav000");
+			//setInterval(getTime,100);
+			setInterval(resetbackground,8000);
+			//resetbackground();
+			setInterval(myanimate,10);
 		}
+		
+		function myanimate()
+		{
+			if (op == 100 || mytmpOBJ == null)
+			{
+				return;
+			}
+			var mycolornum = 0;
+			//mycolornum = (mycolornum + 10) <= 100?mycolornum + 10:100;
+			op += 1;
+			mytmpOBJ.style.opacity = op/100;
+			if (myparents.style.backgroundImage != mytmpOBJ.style.backgroundImage && op == 100)
+				{
+					//sleep(1000);
+					myparents.style.opacity = 0;
+					clearTimeout(setTimeout(resetparent(),2000));
+					clearTimeout(setTimeout(resetop(),1000));
+					//sleep(200);
+				}
+			
+		}
+		
+		function resetparent()
+		{
+			myparents.style.backgroundImage = mytmpOBJ.style.backgroundImage;
+			
+		}
+		
+		function resetop()
+		{
+			myparents.style.opacity = 1;
+		}
+		
+		function resetshouye(a,b)
+		{
+			a.style.backgroundImage ="url('" + b.src + "')";
+		}
+		
+		function resetbackground()
+		{
+			var shouye;
+			
+			if (mytmpOBJ.id.toString() == "nav002")
+			{
+				mytmpOBJ.style.visibility = "hidden";
+				shouye = document.getElementById("nav001");
+				shouye.style.visibility = "visible";
+			}
+			else
+				{
+					mytmpOBJ.style.visibility = "hidden";
+					shouye = document.getElementById("nav002");
+					shouye.style.visibility = "visible";
+				}
+			var img = new Image();
+			img.src = "img/back/back (" + backnum.toString() + ").jpg";
+			// 确定图片加载完成后再进行背景图片切换
+			img.onload = function () {
+			//document.body.style.backgroundImage = "url(" + img.src + ")";
+			//shouye.style.backgroundImage = "url('img/back/back (" + backnum.toString() + ").jpg')";
+				//sleep(500);
+				shouye.style.opacity = 0;
+				clearTimeout(setTimeout(resetshouye(shouye,img),1500));
+			}
+			op = 0;
+			mytmpOBJ = shouye;
+			if (backnum == 35)
+				backnum = 0;
+			backnum++;
+		}
+		
+		var sleep = function(time) {
+    var startTime = new Date().getTime() + parseInt(time, 10);
+    while(new Date().getTime() < startTime) {}
+};
+		
 		function getTime()
 		{
 
@@ -120,6 +204,7 @@
 <body>
 	<!-- 电脑PC端 -->
 	<div id="pc">
+		
 		<div id="content">
 			<!-- 内容左侧选择区域 -->
 			<ul id="cleft">
@@ -151,6 +236,10 @@
 
 				<!--第一页 - 首页-HTML页面-->
 				<div id="nav01">
+					
+					<div id="nav001"></div>
+					<div id="nav002"></div>
+					<div id="nav000"></div>
 					<div class="nav01_left">
 						<div class="nav01_logo">
 							<img src="img/cnm.sb_logo.svg" />
@@ -165,7 +254,6 @@
 						</div>
 						<div class="nav01_but">
 							<div class="nav01_but01">探索</div>
-							<div onClick="playGs()">2333</div>
 							<!--<div class="nav01_but02">商业合作</div>-->
 						</div>
 					</div>
@@ -175,15 +263,17 @@
 							<p>QQ:329125460</p>
 							<p>邮箱:329125460@qq.com</p>
 						</div>
-						<div class="nav01_fpw">
+						<img src="img/mylogo.png" alt="头像" style="width: 150px;height: 70px;position: absolute;vertical-align: bottom;bottom: 20px;right: 15px">
+						<!--<div class="nav01_fpw">
 							<h5>期末倒计时: &nbsp;</h5>
 							<h5 id="myt"></h5>
 							<p>载霆，一起加油！！</p>
-						</div>
+						</div>-->
 					</div>
 					<!-- 版权信息，可修改,可删除,不强求 -->
 					<div class="nav01_fooder">版权所有:杰尼龟团队 &nbsp;&nbsp;|&nbsp;&nbsp; 备案号:none
 						&nbsp;&nbsp;|&nbsp;&nbsp; © 2020-2022  All Copyright Reserved</div>
+					
 				</div>
 
 
