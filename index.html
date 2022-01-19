@@ -36,6 +36,7 @@
 		var mytmpOBJ;
 		var myparents;
 		var imagelist = new Array(35);
+		var cannext = true;
 		function aWake()
 		{
 			alert("");
@@ -77,6 +78,7 @@
 						//clearTimeout(setTimeout(resetshouye(shouye,img),1500));
 						myparents.style.backgroundImage = "url('" + img.src + "')";
 						myparents.style.opacity = 1;
+						cannext = true;
 					}
 				}
 			
@@ -100,6 +102,7 @@
 		
 		function resetbackground()
 		{
+			while (cannext == false){}
 			var shouye;
 			
 			if (mytmpOBJ.id.toString() == "nav002")
