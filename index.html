@@ -105,19 +105,20 @@
 			while (cannext == false){}
 			cannext = false;
 			mytmpOBJ.style.opacity = 0;
+			shouye.style.opacity = 0;
 			var shouye;
 			
 			if (mytmpOBJ.id.toString() == "nav002")
 			{
 				shouye = document.getElementById("nav001");
-				shouye.style.opacity = 1;
+				//shouye.style.opacity = 1;
 			}
 			else
 				{
 					shouye = document.getElementById("nav002");
-					shouye.style.opacity = 1;
+					//shouye.style.opacity = 1;
 				}
-			shouye.style.opacity = 0;
+			
 			var img = new Image();
 			img.src = "img/back/back (" + backnum.toString() + ").jpg";
 			// 确定图片加载完成后再进行背景图片切换
