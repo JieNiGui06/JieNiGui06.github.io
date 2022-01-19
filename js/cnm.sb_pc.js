@@ -17,7 +17,7 @@ window.onload=function()
 	let divTyping = document.getElementById('etext')
 	let i = 0,
 		timer = 0,
-		str = '霆思相照\n		——JNG'
+		str = "霆思相照  "
 	function typing()
 	{
 		if (i <= str.length)

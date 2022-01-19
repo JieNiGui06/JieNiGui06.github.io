@@ -35,11 +35,11 @@
 		var op = 0;
 		var mytmpOBJ;
 		var myparents;
-		var imagelist = new Array(35);
+		var imagelist = new Array(40);
 		var cannext = true;
 		function aWake()
 		{
-			alert("");
+			cannext = true;
 			mytmpOBJ = document.getElementById("nav001");
 			myparents = document.getElementById("nav000");
 			//setInterval(getTime,100);
@@ -67,7 +67,7 @@
 					//sleep(200);
 					myparents.style.opacity = 0;
 					var img = new Image();
-					img.src = "img/back/back (" + (backnum - 1).toString() + ").jpg";
+					img.src = "img/back/back (" + ((backnum - 1) == 0?40:(backnum - 1)).toString() + ").jpg";
 					// 确定图片加载完成后再进行背景图片切换
 					img.onload = function () 
 					{
@@ -105,7 +105,7 @@
 			while (cannext == false){}
 			cannext = false;
 			mytmpOBJ.style.opacity = 0;
-			shouye.style.opacity = 0;
+			//shouye.style.opacity = 0;
 			var shouye;
 			
 			if (mytmpOBJ.id.toString() == "nav002")
@@ -132,7 +132,7 @@
 			}
 			op = 0;
 			mytmpOBJ = shouye;
-			if (backnum == 35)
+			if (backnum == 40)
 				backnum = 0;
 			backnum++;
 		}
@@ -267,15 +267,15 @@
 							<img src="img/cnm.sb_logo.svg" />
 							<h4>杰尼龟梦回 <span><a href="https://space.bilibili.com/1190007755">GO!BiliBili</a></span></h4>
 						</div>
-						<div class="nav01_wz">
-							<h5>初次见面，正在人间奋斗的你！</h5>
-							<h1>欢迎!</h1>
+						<div class="nav01_wz" style="position: absolute;vertical-align: bottom;bottom: 75px;left: 50px">
+							<h5>初次见面，Hi~</h5>
+							<h3>欢迎!</h3>
 							<h6><a href="https://space.bilibili.com/1190007755">https://space.bilibili.com/1190007755</a></h6>
-							<h3>网|址 &nbsp;一|秒|速|记</h3>
-							<div class="bar"></div>
+							
+							<div class="bar" style="position: relative;top: 5px;"></div>
 						</div>
 						<div class="nav01_but">
-							<div class="nav01_but01">探索</div>
+							<div class="nav01_but01" style="position: absolute;vertical-align: bottom;bottom: 25px;">关于</div>
 							<!--<div class="nav01_but02">商业合作</div>-->
 						</div>
 					</div>

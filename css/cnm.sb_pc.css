@@ -406,7 +406,7 @@ li{
 	z-index: 7;
 }
 .bar {
-  animation:loadingJ 5s infinite;
+  animation:loadingJ 6s infinite;
 	z-index: 7;
 }
 @keyframes loadingJ {
@@ -420,7 +420,7 @@ li{
 	  z-index: 7;
   }
   50%{
-    transform: translate(180px, 0);
+    transform: translate(240px, 0);
     background-color: #f5634a;
     width: 15px;
 	  z-index: 7;
