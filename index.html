@@ -103,19 +103,18 @@
 		function resetbackground()
 		{
 			while (cannext == false){}
+			mytmpOBJ.style.opacity = 0;
 			var shouye;
 			
 			if (mytmpOBJ.id.toString() == "nav002")
 			{
-				mytmpOBJ.style.visibility = "hidden";
 				shouye = document.getElementById("nav001");
-				shouye.style.visibility = "visible";
+				shouye.style.opacity = 1;
 			}
 			else
 				{
-					mytmpOBJ.style.visibility = "hidden";
 					shouye = document.getElementById("nav002");
-					shouye.style.visibility = "visible";
+					shouye.style.opacity = 1;
 				}
 			shouye.style.opacity = 0;
 			var img = new Image();
