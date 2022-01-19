@@ -35,8 +35,10 @@
 		var op = 0;
 		var mytmpOBJ;
 		var myparents;
+		var imagelist = new Array(35);
 		function aWake()
 		{
+			alert("");
 			mytmpOBJ = document.getElementById("nav001");
 			myparents = document.getElementById("nav000");
 			//setInterval(getTime,100);
@@ -58,10 +60,24 @@
 			if (myparents.style.backgroundImage != mytmpOBJ.style.backgroundImage && op == 100)
 				{
 					//sleep(1000);
-					myparents.style.opacity = 0;
-					clearTimeout(setTimeout(resetparent(),2000));
-					clearTimeout(setTimeout(resetop(),1000));
+					//myparents.style.opacity = 0;
+					//clearTimeout(setTimeout(resetparent(),2000));
+					//clearTimeout(setTimeout(resetop(),1000));
 					//sleep(200);
+					myparents.style.opacity = 0;
+					var img = new Image();
+					img.src = "img/back/back (" + (backnum - 1).toString() + ").jpg";
+					// 确定图片加载完成后再进行背景图片切换
+					img.onload = function () 
+					{
+					//document.body.style.backgroundImage = "url(" + img.src + ")";
+					//shouye.style.backgroundImage = "url('img/back/back (" + backnum.toString() + ").jpg')";
+						//sleep(500);
+						//shouye.style.opacity = 0;
+						//clearTimeout(setTimeout(resetshouye(shouye,img),1500));
+						myparents.style.backgroundImage = "url('" + img.src + "')";
+						myparents.style.opacity = 1;
+					}
 				}
 			
 		}
@@ -98,6 +114,7 @@
 					shouye = document.getElementById("nav002");
 					shouye.style.visibility = "visible";
 				}
+			shouye.style.opacity = 0;
 			var img = new Image();
 			img.src = "img/back/back (" + backnum.toString() + ").jpg";
 			// 确定图片加载完成后再进行背景图片切换
@@ -105,8 +122,9 @@
 			//document.body.style.backgroundImage = "url(" + img.src + ")";
 			//shouye.style.backgroundImage = "url('img/back/back (" + backnum.toString() + ").jpg')";
 				//sleep(500);
-				shouye.style.opacity = 0;
-				clearTimeout(setTimeout(resetshouye(shouye,img),1500));
+				//shouye.style.opacity = 0;
+				//clearTimeout(setTimeout(resetshouye(shouye,img),1500));
+				shouye.style.backgroundImage = "url('" + img.src + "')";
 			}
 			op = 0;
 			mytmpOBJ = shouye;

@@ -187,7 +187,7 @@ li{
 	position: absolute;
 	top: 0;
 	right: 0;
-	z-index: 1;
+	z-index: 5;
 }
 
 #nav002{
@@ -202,7 +202,7 @@ li{
 	position: absolute;
 	top: 0;
 	right: 0;
-	z-index: 1;
+	z-index: 5;
 }
 
 #nav000{
