@@ -236,7 +236,14 @@
     		return str;
 		}
 		// = aWake;
-		
+		function download_onclick(event)
+		{
+//			alert(event.title.toString());
+			event.style.animation = "btnstyle 0.3s 1";
+			event.addEventListener("animationend", function(){
+				event.style.animation = "";
+			});
+		}
 		
 		window.onpageshow = aWake;
 	</script>
@@ -264,6 +271,7 @@
 				<li id="cleft_li03"><img src="font/cnmsb03.png" /><span>站长团队</span></li>
 				<!--<li id="cleft_li04"><img src="font/cnmsb04.png" /><span>商业合作</span></li>-->
 				<li id="cleft_li05"><img src="font/cnmsb05.png" /><span>在线作品</span></li>
+				<li id="cleft_li008"><img src="font/cnmsb05.png" /><span>本地作品</span></li>
 				<!--<li id="cleft_li07"><img src="font/cnmsb07.png" /><span>本站源码</span></li>
 				<li id="cleft_li08"><img src="font/cnmsb01.png" /><span>静态资源</span></li>-->
 				<li id="cleft_li06" onclick="AddFavorite('哎呦不错',location.href)"><img
@@ -329,7 +337,7 @@
 						<h3>😁站/长/资/料</h3>
 						<div class="nav02_grzl_headimg">
 							<img src="img/tx.jpg" alt="[头像]">
-							<a href="mailto:x6dtousu@gmail.com" target="_blank" rel="noopener noreferrer">联系站长</a>
+							<a href="mailto:329125460@qq.com" target="_blank" rel="noopener noreferrer">联系站长</a>
 						</div>
 						<div class="nav02_grzl_txt">
 							<p>网名：杰尼龟</p>
@@ -341,8 +349,6 @@
 							<p>性格：落落大方,喜欢自由,脾气极好</p>
 							<p>梦想：实现财富自由</p>
 							<p>语录：凡心所向，素履所往，生如逆旅，一苇以航。——《尘曲》</p>
-							<p>语录：合抱之木，生于毫末；九层之台，起于累土；千里之行，始于足下。——《道德经·第六十四章》</p>
-
 						</div>
 					</div>
 					<!-- 个人介绍 -->
@@ -608,115 +614,257 @@
 					<div class="nav08_bg">
 						<div class="nav08_bt">在线游戏</div>
 					</div>
-					<!-- 文件托管 -->
-					<!--<div class="nav08_kj">
-						<h3>😁文/件/托/管</h3>
-						<p>
-							自己弄个阿里云oss或者腾讯云cos，然后把css文件和js文件托管上去，速度会快好多。
-						</p>
-
+					<div style="position: relative;top: 30px;height: 50px;">
 					</div>
-					<!-- 图片托管 -->
-					<!--<div class="nav08_kj">
-						<h3>😁图/片/托/管</h3>
-						<h4>🤣为缓解服务器压力，图片托管在了腾讯微云，速度嘎嘎快~下面直链，直接复制引用就行了🤣</h4>
-						<p>
-							电脑端开局和移动端顶部图片【start.jpg】链接：<span>https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/002178339251e27c0c379a074b53421374995f70f380206a91f941eca2a506db9730b7d5e154c0b0a54585fa7dcca392?pictype=scale&from=30113&version=3.3.3.3&uin=22741441&fname=start.jpg&size=750</span>
-						</p>
-						<p>
-							侧栏顶部头像背景图【cnmtlbg.jpg】链接：<span>https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/bead1e7b47b025079a73cefdbae4743cea08ca3470f80a09b023945be16337e04dc04db5e3d5c2332f408a5f257de726?pictype=scale&from=30113&version=3.3.3.3&uin=22741441&fname=cnmtlbg.jpg&size=750</span>
-						</p>
-						<p>
-							头像【tx.jpg】链接：<span>https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/cb94ddb129a2d625b2bf9cd41781294946040074c54d215d91a6fec19d17f89bbf85410ddc0accb58a4eadec117b1083?pictype=scale&from=30113&version=3.3.3.3&uin=22741441&fname=tx.jpg&size=750</span>
-						</p>
-						<p>
-							官网首页页面背景图片【shouye.jpg】链接：<span>https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/ea696cade47ec01a4f2c58b388fd85795311c5d9cb4bdc17a97460c319758177db45d99138e6cf4bf9d437e8140e4c72?pictype=scale&from=30113&version=3.3.3.3&uin=22741441&fname=shouye.jpg&size=750</span>
-						</p>
-						<p>
-							关于本站页面顶部图片【guanyubenzhan.jpg】链接：<span>https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/662ea4195755f0cd46211b621aa3182a9c3aac9b6c5ad71b61935ffd475a56a953ba9463e9dd1af985367c936460b450?pictype=scale&from=30113&version=3.3.3.3&uin=22741441&fname=guanyubenzhan.jpg&size=750</span>
-						</p>
-						<p>
-							站长团队成员图片【cnmteam01.jpg】链接：<span>https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/07c62d66f216aebf1d1d3948bc23621f3907aaacbe38639121288f3b8dad0a39d30a15a80bef0054b62c8c11e740d3d5?pictype=scale&from=30113&version=3.3.3.3&uin=22741441&fname=cnmteam01.png&size=750</span>
-						</p>
-						<p>
-							站长团队成员图片【cnmteam02.jpg】链接：<span>https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/3559a37a5877eb3acc95d81ca173fdd6d1984a6286f3c53a9e308d28dfad31342c6a2318fbf44a1182fe63f9e9dd49ec?pictype=scale&from=30113&version=3.3.3.3&uin=22741441&fname=cnmteam02.png&size=750</span>
-						</p>
-						<p>
-							站长团队成员图片【cnmteam03.jpg】链接：<span>https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/9a041b779f08d00846a787dc53e461a3796151202f05311abeda37a5549cc31b45347ddcb9936d6f07a466347f34d77b?pictype=scale&from=30113&version=3.3.3.3&uin=22741441&fname=cnmteam03.png&size=750</span>
-						</p>
-						<p>
-							站长团队成员图片【cnmteam04.jpg】链接：<span>https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/d72bd33535074cff369a071ac4a9c68e832e6587cb06260400d328a382447e98f9e84330800eb4d547045d2d1dda907e?pictype=scale&from=30113&version=3.3.3.3&uin=22741441&fname=cnmteam04.png&size=750</span>
-						</p>
-						<p>
-							站长团队成员图片【cnmteam05.jpg】链接：<span>https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/11b9a14f2d4274b40b5742683800d522cee1cf9825d1e0e27d8e050b0452609bee75b88e770a627ca8ad7971e6d5b757?pictype=scale&from=30113&version=3.3.3.3&uin=22741441&fname=cnmteam05.png&size=750</span>
-						</p>
-						<p>
-							商业合作页面背景图片【shangyehezuo.jpg】链接：<span>https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/8c7b1a2247bba2796cf5da67c751ef25f6299468fcbe5cb8664b3de690da2b227f1d38c5fd39556c8380b669c5fdbcd3?pictype=scale&from=30113&version=3.3.3.3&uin=22741441&fname=shangyehezuo.png&size=750</span>
-						</p>
-						<p>
-							站点展示页面背景图片【zhandian.jpg】链接：<span>https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/be5bb2c677a2eaa1eea004155de1c5ff9000c580016a8cb7a100b6d705187e5d868d97e757720ee9b73983cb3208507f?pictype=scale&from=30113&version=3.3.3.3&uin=22741441&fname=zhandian.jpg&size=750</span>
-						</p>
-						<p>&nbsp;
-							
-						</p>
-
-
-					</div>
-
-					<div class="nav08_kj">
-						<h3>😀Emoji符号</h3>
-						<h4>表/情/类</h4>
-						<p>
-							😀 😁 😂 🤣 😃 😄 😅 😆 😉 😊 😋 😎 😍 😘 😗 😙 😚 ☺️ 🙂 🤗 🤩 🤔 🤨 😐 😑 😶 🙄 😏 😣 😥 😮
-							🤐 😯 😪 😫 😴 😌 😛 😜 😝 🤤 😒 😓 😔 😕 🙃 🤑 😲 ☹️ 🙁 😖 😞 😟 😤 😢 😭 😦 😧 😨 😩 🤯 😬
-							😰 😱 😳 🤪 😵 😡 😠 🤬 😷 🤒 🤕 🤢 🤮 🤧 😇 🤠 🤡 🤥 🤫 🤭 🧐 🤓 😈 👿 👹 👺 💀 👻 👽 🤖 💩
-							😺 😸 😹 😻 😼 😽 🙀 😿 😾
-						</p>
-						<h4>动/物/自/然</h4>
-						<p>
-							🐶 🐱 🐭 🐹 🐰 🦊 🦝 🐻 🐼 🦘 🦡 🐨 🐯 🦁 🐮 🐷 🐽 🐸 🐵 🙈 🙉 🙊 🐒 🐔 🐧 🐦 🐤 🐣 🐥 🦆 🦢
-							🦅 🦉 🦚 🦜 🦇 🐺 🐗 🐴 🦄 🐝 🐛 🦋 🐌 🐚 🐞 🐜 🦗 🕷 🕸 🦂 🦟 🦠 🐢 🐍 🦎 🦖 🦕 🐙 🦑 🦐 🦀
-							🐡 🐠 🐟 🐬 🐳 🐋 🦈 🐊 🐅 🐆 🦓 🦍 🐘 🦏 🦛 🐪 🐫 🦙 🦒 🐃 🐂 🐄 🐎 🐖 🐏 🐑 🐐 🦌 🐕 🐩 🐈
-							🐓 🦃 🕊 🐇 🐁 🐀 🐿 🦔 🐾 🐉 🐲 🌵 🎄 🌲 🌳 🌴 🌱 🌿 ☘️ 🍀 🎍 🎋 🍃 🍂 🍁 🍄 🌾 💐 🌷 🌹 🥀
-							🌺 🌸 🌼 🌻 🌞 🌝 🌛 🌜 🌚 🌕 🌖 🌗 🌘 🌑 🌒 🌓 🌔 🌙 🌎 🌍 🌏 💫 ⭐️ 🌟 ✨ ⚡️ ☄️ 💥 🔥 🌪 🌈
-							☀️ 🌤 ⛅️ 🌥 ☁️ 🌦 🌧 ⛈ 🌩 🌨 ❄️ ☃️ ⛄️ 🌬 💨 💧 💦 ☔️ ☂️ 🌊 🌫
-						</p>
-						<h4>水/果/食/物</h4>
-						<p>
-							🍏 🍎 🍐 🍊 🍋 🍌 🍉 🍇 🍓 🍈 🍒 🍑 🍍 🥭 🥥 🥝 🍅 🍆 🥑 🥦 🥒 🥬 🌶 🌽 🥕 🥔 🍠 🥐 🍞 🥖 🥨
-							🥯 🧀 🥚 🍳 🥞 🥓 🥩 🍗 🍖 🌭 🍔 🍟 🍕 🥪 🥙 🌮 🌯 🥗 🥘 🥫 🍝 🍜 🍲 🍛 🍣 🍱 🥟 🍤 🍙 🍚 🍘
-							🍥 🥮 🥠 🍢 🍡 🍧 🍨 🍦 🥧 🍰 🎂 🍮 🍭 🍬 🍫 🍿 🧂 🍩 🍪 🌰 🥜 🍯 🥛 🍼 ☕️ 🍵 🥤 🍶 🍺 🍻 🥂
-							🍷 🥃 🍸 🍹 🍾 🥄 🍴 🍽 🥣 🥡 🥢
-						</p>
-						<h4>运/动/娱/乐</h4>
-						<p>
-							⚽️ 🏀 🏈 ⚾️ 🥎 🏐 🏉 🎾 🥏 🎱 🏓 🏸 🥅 🏒 🏑 🥍 🏏 ⛳️ 🏹 🎣 🥊 🥋 🎽 ⛸ 🥌 🛷 🛹 🎿 ⛷ 🏂
-							🏋️‍♀️ 🏋🏻‍♀️ 🏋🏼‍♀️ 🏋🏽‍♀️ 🏋🏾‍♀️ 🏋🏿‍♀️ 🏋️‍♂️ 🏋🏻‍♂️ 🏋🏼‍♂️ 🏋🏽‍♂️ 🏋🏾‍♂️
-							🏋🏿‍♂️ 🤼‍♀️ 🤼‍♂️ 🤸‍♀️ 🤸🏻‍♀️ 🤸🏼‍♀️ 🤸🏽‍♀️ 🤸🏾‍♀️ 🤸🏿‍♀️ 🤸‍♂️ 🤸🏻‍♂️ 🤸🏼‍♂️
-							🤸🏽‍♂️ 🤸🏾‍♂️ 🤸🏿‍♂️ ⛹️‍♀️ ⛹🏻‍♀️ ⛹🏼‍♀️ ⛹🏽‍♀️ ⛹🏾‍♀️ ⛹🏿‍♀️ ⛹️‍♂️ ⛹🏻‍♂️ ⛹🏼‍♂️ ⛹🏽‍♂️
-							⛹🏾‍♂️ ⛹🏿‍♂️ 🤺 🤾‍♀️ 🤾🏻‍♀️ 🤾🏼‍♀️ 🤾🏾‍♀️ 🤾🏾‍♀️ 🤾🏿‍♀️ 🤾‍♂️ 🤾🏻‍♂️ 🤾🏼‍♂️ 🤾🏽‍♂️
-							🤾🏾‍♂️ 🤾🏿‍♂️ 🏌️‍♀️ 🏌🏻‍♀️ 🏌🏼‍♀️ 🏌🏽‍♀️ 🏌🏾‍♀️ 🏌🏿‍♀️ 🏌️‍♂️ 🏌🏻‍♂️ 🏌🏼‍♂️
-							🏌🏽‍♂️ 🏌🏾‍♂️ 🏌🏿‍♂️ 🏇 🏇🏻 🏇🏼 🏇🏽 🏇🏾 🏇🏿 🧘‍♀️ 🧘🏻‍♀️ 🧘🏼‍♀️ 🧘🏽‍♀️ 🧘🏾‍♀️
-							🧘🏿‍♀️ 🧘‍♂️ 🧘🏻‍♂️ 🧘🏼‍♂️ 🧘🏽‍♂️ 🧘🏾‍♂️ 🧘🏿‍♂️ 🏄‍♀️ 🏄🏻‍♀️ 🏄🏼‍♀️ 🏄🏽‍♀️ 🏄🏾‍♀️
-							🏄🏿‍♀️ 🏄‍♂️ 🏄🏻‍♂️ 🏄🏼‍♂️ 🏄🏽‍♂️ 🏄🏾‍♂️ 🏄🏿‍♂️ 🏊‍♀️ 🏊🏻‍♀️ 🏊🏼‍♀️ 🏊🏽‍♀️ 🏊🏾‍♀️
-							🏊🏿‍♀️ 🏊‍♂️ 🏊🏻‍♂️ 🏊🏼‍♂️ 🏊🏽‍♂️ 🏊🏾‍♂️ 🏊🏿‍♂️ 🤽‍♀️ 🤽🏻‍♀️ 🤽🏼‍♀️ 🤽🏽‍♀️ 🤽🏾‍♀️
-							🤽🏿‍♀️ 🤽‍♂️ 🤽🏻‍♂️ 🤽🏼‍♂️ 🤽🏽‍♂️ 🤽🏾‍♂️ 🤽🏿‍♂️ 🚣‍♀️ 🚣🏻‍♀️ 🚣🏼‍♀️ 🚣🏽‍♀️ 🚣🏾‍♀️
-							🚣🏿‍♀️ 🚣‍♂️ 🚣🏻‍♂️ 🚣🏼‍♂️ 🚣🏽‍♂️ 🚣🏾‍♂️ 🚣🏿‍♂️ 🧗‍♀️ 🧗🏻‍♀️ 🧗🏼‍♀️ 🧗🏽‍♀️ 🧗🏾‍♀️
-							🧗🏿‍♀️ 🧗‍♂️ 🧗🏻‍♂️ 🧗🏼‍♂️ 🧗🏽‍♂️ 🧗🏾‍♂️ 🧗🏿‍♂️ 🚵‍♀️ 🚵🏻‍♀️ 🚵🏼‍♀️ 🚵🏽‍♀️ 🚵🏾‍♀️
-							🚵🏿‍♀️ 🚵‍♂️ 🚵🏻‍♂️ 🚵🏼‍♂️ 🚵🏽‍♂️ 🚵🏾‍♂️ 🚵🏿‍♂️ 🚴‍♀️ 🚴🏻‍♀️ 🚴🏼‍♀️ 🚴🏽‍♀️ 🚴🏾‍♀️
-							🚴🏿‍♀️ 🚴‍♂️ 🚴🏻‍♂️ 🚴🏼‍♂️ 🚴🏽‍♂️ 🚴🏾‍♂️ 🚴🏿‍♂️ 🏆 🥇 🥈 🥉 🏅 🎖 🏵 🎗 🎫 🎟 🎪 🤹‍♀️
-							🤹🏻‍♀️ 🤹🏼‍♀️ 🤹🏽‍♀️ 🤹🏾‍♀️ 🤹🏿‍♀️ 🤹‍♂️ 🤹🏻‍♂️ 🤹🏼‍♂️ 🤹🏽‍♂️ 🤹🏾‍♂️ 🤹🏿‍♂️ 🎭 🎨
-							🎬 🎤 🎧 🎼 🎹 🥁 🎷 🎺 🎸 🎻 🎲 🧩 ♟ 🎯 🎳 🎮 🎰
-						<p>&nbsp;
-							
-						</p>
-						</p>
-					</div>
-
-					<!-- 到底了-提示 -->
+						
+					<iframe frameborder="0" src="https://itch.io/embed/1331730?border_width=5" width="216" height="175"><a href="https://jienigui06.itch.io/pvzweb">植物大战僵尸 by JieNiGui06</a></iframe>
 					<p class="ebpx8">--- 暂时先展示这么多啦 ---</p>
 				</div>
-
+				
+				
+				<div id="nav008">
+					<div class="nav008_bg">
+						<div class="nav008_bt">本地游戏</div>
+					</div>
+					<div style="position: relative;top: 30px;height: 50px;">
+					</div>
+					
+					<div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div><div class="nav05_centent_mb" style="position: relative;">
+							<a href="http://#/" target="_blank" rel="noopener noreferrer">
+								<div><img src="img/nav05_zp01.jpg" alt="[]"></div>
+								<h3>贫困网</h3>
+								<p>贫困</p>
+							</a>
+							<div>立即前往</div>
+						</div>
+<!--					<div>--- 暂时先展示这么多啦 ---</div>-->
+<!--					<p class="ebpx08" style="position: relative;vertical-align: bottom;bottom: -30px;">--- 暂时先展示这么多啦 ---</p>-->
+<!--					<p class="ebpx8" style="position: absolute;vertical-align: bottom;bottom: 5px;left: auto;right: auto; text-align: center;" >--- 暂时先展示这么多啦 ---</p>-->
+				</div>
 				<!-- 第六页 - 本站源码 -->
 				<!--<div id="nav07">
 					<div class="nav07_bg">

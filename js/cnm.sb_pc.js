@@ -43,15 +43,16 @@ window.onload=function()
 		$("#cleft_li03").css({"background-color":"#f9f9f9"});
 		$("#cleft_li04").css({"background-color":"#f9f9f9"});
 		$("#cleft_li05").css({"background-color":"#f9f9f9"});
+		
 		$("#cleft_li07").css({"background-color":"#f9f9f9"});
-		$("#cleft_li08").css({"background-color":"#f9f9f9"});
+		$("#cleft_li08").css({"background-color":"#f9f9f9"});$("#cleft_li008").css({"background-color":"#f9f9f9"});
 		$("#nav01").animate({"left":"0%"},800);
 		$("#nav02").animate({"left":"0%"},800);
 		$("#nav03").animate({"left":"0%"},800);
 		$("#nav04").animate({"left":"0%"},800);
 		$("#nav05").animate({"left":"0%"},800);
 		$("#nav07").animate({"left":"0%"},800);
-		$("#nav08").animate({"left":"0%"},800);
+		$("#nav08").animate({"left":"0%"},800);$("#nav008").animate({"left":"0%"},800);
 		
 	})
 	$("#cleft_li02").click(function(){
@@ -60,15 +61,17 @@ window.onload=function()
 		$("#cleft_li03").css({"background-color":"#f9f9f9"});
 		$("#cleft_li04").css({"background-color":"#f9f9f9"});
 		$("#cleft_li05").css({"background-color":"#f9f9f9"});
+		$("#cleft_li008").css({"background-color":"#f9f9f9"});
 		$("#cleft_li07").css({"background-color":"#f9f9f9"});
 		$("#cleft_li08").css({"background-color":"#f9f9f9"});
 		$("#nav01").animate({"left":"-100%"},800);
+		
 		$("#nav02").animate({"left":"0%"},800);
 		$("#nav03").animate({"left":"0%"},800);
 		$("#nav04").animate({"left":"0%"},800);
 		$("#nav05").animate({"left":"0%"},800);
 		$("#nav07").animate({"left":"0%"},800);
-		$("#nav08").animate({"left":"0%"},800);
+		$("#nav08").animate({"left":"0%"},800);$("#nav008").animate({"left":"0%"},800);
 	})
 	$("#cleft_li03").click(function(){
 		$("#cleft_li01").css({"background-color":"#f9f9f9"});
@@ -76,15 +79,17 @@ window.onload=function()
 		$("#cleft_li03").css({"background-color":"#ececec"});
 		$("#cleft_li04").css({"background-color":"#f9f9f9"});
 		$("#cleft_li05").css({"background-color":"#f9f9f9"});
+		$("#cleft_li008").css({"background-color":"#f9f9f9"});
 		$("#cleft_li07").css({"background-color":"#f9f9f9"});
 		$("#cleft_li08").css({"background-color":"#f9f9f9"});
 		$("#nav01").animate({"left":"-100%"},800);
 		$("#nav02").animate({"left":"-100%"},800);
+		
 		$("#nav03").animate({"left":"0%"},800);
 		$("#nav04").animate({"left":"0%"},800);
 		$("#nav05").animate({"left":"0%"},800);
 		$("#nav07").animate({"left":"0%"},800);
-		$("#nav08").animate({"left":"0%"},800);
+		$("#nav08").animate({"left":"0%"},800);$("#nav008").animate({"left":"0%"},800);
 	})
 	$("#cleft_li04").click(function(){
 		$("#cleft_li01").css({"background-color":"#f9f9f9"});
@@ -92,15 +97,17 @@ window.onload=function()
 		$("#cleft_li03").css({"background-color":"#f9f9f9"});
 		$("#cleft_li04").css({"background-color":"#ececec"});
 		$("#cleft_li05").css({"background-color":"#f9f9f9"});
+		$("#cleft_li008").css({"background-color":"#f9f9f9"});
 		$("#cleft_li07").css({"background-color":"#f9f9f9"});
 		$("#cleft_li08").css({"background-color":"#f9f9f9"});
 		$("#nav01").animate({"left":"-100%"},800);
 		$("#nav02").animate({"left":"-100%"},800);
 		$("#nav03").animate({"left":"-100%"},800);
+		
 		$("#nav04").animate({"left":"0%"},800);
 		$("#nav05").animate({"left":"0%"},800);
 		$("#nav07").animate({"left":"0%"},800);
-		$("#nav08").animate({"left":"0%"},800);
+		$("#nav08").animate({"left":"0%"},800);$("#nav008").animate({"left":"0%"},800);
 	})
 	$("#cleft_li05").click(function(){
 		$("#cleft_li01").css({"background-color":"#f9f9f9"});
@@ -108,15 +115,17 @@ window.onload=function()
 		$("#cleft_li03").css({"background-color":"#f9f9f9"});
 		$("#cleft_li04").css({"background-color":"#f9f9f9"});
 		$("#cleft_li05").css({"background-color":"#ececec"});
+		$("#cleft_li008").css({"background-color":"#f9f9f9"});
 		$("#cleft_li07").css({"background-color":"#f9f9f9"});
 		$("#cleft_li08").css({"background-color":"#f9f9f9"});
 		$("#nav01").animate({"left":"-100%"},800);
 		$("#nav02").animate({"left":"-100%"},800);
 		$("#nav03").animate({"left":"-100%"},800);
 		$("#nav04").animate({"left":"-100%"},800);
+		
 		$("#nav05").animate({"left":"0%"},800);
 		$("#nav07").animate({"left":"0%"},800);
-		$("#nav08").animate({"left":"0%"},800);
+		$("#nav08").animate({"left":"0%"},800);$("#nav008").animate({"left":"0%"},800);
 	})
 	
 	$("#cleft_li07").click(function(){
@@ -125,6 +134,7 @@ window.onload=function()
 		$("#cleft_li03").css({"background-color":"#f9f9f9"});
 		$("#cleft_li04").css({"background-color":"#f9f9f9"});
 		$("#cleft_li05").css({"background-color":"#f9f9f9"});
+		$("#cleft_li008").css({"background-color":"#f9f9f9"});
 		$("#cleft_li07").css({"background-color":"#ececec"});
 		$("#cleft_li08").css({"background-color":"#f9f9f9"});
 		$("#nav01").animate({"left":"-100%"},800);
@@ -132,8 +142,9 @@ window.onload=function()
 		$("#nav03").animate({"left":"-100%"},800);
 		$("#nav04").animate({"left":"-100%"},800);
 		$("#nav05").animate({"left":"-100%"},800);
+		
 		$("#nav07").animate({"left":"0%"},800);
-		$("#nav08").animate({"left":"0%"},800);
+		$("#nav08").animate({"left":"0%"},800);$("#nav008").animate({"left":"0%"},800);
 	})
 
 	$("#cleft_li08").click(function(){
@@ -144,14 +155,34 @@ window.onload=function()
 		$("#cleft_li05").css({"background-color":"#f9f9f9"});
 		$("#cleft_li07").css({"background-color":"#f9f9f9"});
 		$("#cleft_li08").css({"background-color":"#ececec"});
+		$("#cleft_li008").css({"background-color":"#f9f9f9"});
 		$("#nav01").animate({"left":"-100%"},800);
 		$("#nav02").animate({"left":"-100%"},800);
 		$("#nav03").animate({"left":"-100%"},800);
 		$("#nav04").animate({"left":"-100%"},800);
 		$("#nav05").animate({"left":"-100%"},800);
 		$("#nav07").animate({"left":"-100%"},800);
-		$("#nav08").animate({"left":"0%"},800);
+		
+		$("#nav08").animate({"left":"0%"},800);$("#nav008").animate({"left":"0%"},800);
 	})	
+	$("#cleft_li008").click(function(){
+		$("#cleft_li01").css({"background-color":"#f9f9f9"});
+		$("#cleft_li02").css({"background-color":"#f9f9f9"});
+		$("#cleft_li03").css({"background-color":"#f9f9f9"});
+		$("#cleft_li04").css({"background-color":"#f9f9f9"});
+		$("#cleft_li05").css({"background-color":"#f9f9f9"});
+		$("#cleft_li07").css({"background-color":"#f9f9f9"});
+		$("#cleft_li08").css({"background-color":"#f9f9f9"});
+		$("#cleft_li008").css({"background-color":"#ececec"});
+		$("#nav01").animate({"left":"-100%"},800);
+		$("#nav02").animate({"left":"-100%"},800);
+		$("#nav03").animate({"left":"-100%"},800);
+		$("#nav04").animate({"left":"-100%"},800);
+		$("#nav05").animate({"left":"-100%"},800);
+		$("#nav07").animate({"left":"-100%"},800);
+		$("#nav08").animate({"left":"-100%"},800);$("#nav008").animate({"left":"0%"},800);
+		
+	})
 
 
 
