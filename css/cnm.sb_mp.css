@@ -50,7 +50,7 @@ a{
 	width: 100%;
 	height: 220px;
 	/* 顶部头图 */
-	background-image: url(../img/start.jpg);
+	background-image: url(https://pic.imgdb.cn/item/62f092b316f2c2beb19b85cd.jpg);
 	/* background-image: url(图片api路径); */
 	background-size: cover;
 }
@@ -140,7 +140,7 @@ a{
 	width: 100%;
 	height: 180px;
 	/* 关于本站顶部头图 */
-	background-image: url(../img/guanyuzhanzhang.jpg);
+	background-image: url(https://pic.imgdb.cn/item/62f086f416f2c2beb1668a40.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;

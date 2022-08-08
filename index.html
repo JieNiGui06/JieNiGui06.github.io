@@ -35,16 +35,19 @@
 		var op = 0;
 		var mytmpOBJ;
 		var myparents;
-		var imagelist = new Array(41);
+		var imagelist;
+        var mystrs = "https://pic.imgdb.cn/item/62f0881d16f2c2beb16c8aa2.png##https://pic.imgdb.cn/item/62f0881d16f2c2beb16c8a8c.png##https://pic.imgdb.cn/item/62f0881d16f2c2beb16c8a4a.png##https://pic.imgdb.cn/item/62f0881d16f2c2beb16c8a3e.png##https://pic.imgdb.cn/item/62f0881d16f2c2beb16c8a1d.png##https://pic.imgdb.cn/item/62f087fa16f2c2beb16be604.jpg##https://pic.imgdb.cn/item/62f087fa16f2c2beb16be5f8.jpg##https://pic.imgdb.cn/item/62f087fa16f2c2beb16be5cb.jpg##https://pic.imgdb.cn/item/62f087fa16f2c2beb16be5c2.jpg##https://pic.imgdb.cn/item/62f087fa16f2c2beb16be5b6.jpg##https://pic.imgdb.cn/item/62f087cb16f2c2beb16aec3e.jpg##https://pic.imgdb.cn/item/62f087bc16f2c2beb16a9d46.jpg##https://pic.imgdb.cn/item/62f0877416f2c2beb1691925.png##https://pic.imgdb.cn/item/62f086f416f2c2beb1668a59.jpg##https://pic.imgdb.cn/item/62f086f416f2c2beb1668a40.jpg##https://pic.imgdb.cn/item/62f086f416f2c2beb1668a31.jpg##https://pic.imgdb.cn/item/62f086f416f2c2beb1668a28.jpg##https://pic.imgdb.cn/item/62f086f416f2c2beb1668a1d.jpg##https://pic.imgdb.cn/item/62f086e816f2c2beb1665daf.jpg##https://pic.imgdb.cn/item/62f086e816f2c2beb1665d91.jpg##https://pic.imgdb.cn/item/62f086e816f2c2beb1665d70.jpg##https://pic.imgdb.cn/item/62f086e816f2c2beb1665d48.jpg##https://pic.imgdb.cn/item/62f086e816f2c2beb1665d30.jpg##https://pic.imgdb.cn/item/62f086ce16f2c2beb165e40a.jpg##https://pic.imgdb.cn/item/62f086ce16f2c2beb165e3fd.jpg##https://pic.imgdb.cn/item/62f086ce16f2c2beb165e3ec.jpg##https://pic.imgdb.cn/item/62f086ce16f2c2beb165e3e5.jpg##https://pic.imgdb.cn/item/62f086ce16f2c2beb165e3d6.jpg##https://pic.imgdb.cn/item/62f086c016f2c2beb1659fb5.jpg##https://pic.imgdb.cn/item/62f086c016f2c2beb1659f95.jpg##https://pic.imgdb.cn/item/62f086c016f2c2beb1659f50.jpg##https://pic.imgdb.cn/item/62f086bb16f2c2beb1658961.png##https://pic.imgdb.cn/item/62f086bb16f2c2beb16588b9.png##https://pic.imgdb.cn/item/62f086a916f2c2beb165215f.png##https://pic.imgdb.cn/item/62f086a516f2c2beb1651016.png##https://pic.imgdb.cn/item/62f086a516f2c2beb1650fe7.png##https://pic.imgdb.cn/item/62f086a516f2c2beb1650fc0.png##https://pic.imgdb.cn/item/62f086a516f2c2beb1650f96.jpg"
 		var cannext = true;
 		function aWake()
 		{
 //			imagelist = new Array(41);
-			for (var i = 1;i < 41;i++)
+			var strssplit = mystrs.split("##");
+			imagelist = new Array(strssplit.length);
+			for (var i = 0;i < strssplit.length;i++)
 				{
 //					alert(i.toString());
 					imagelist[i] = new Image();
-					imagelist[i].src = "img/back/back (" + i.toString() + ").jpg";
+					imagelist[i].src = strssplit[i];
 					var loaded = false;
 //					imagelist[i].onload = function(){
 //						loaded = true;
@@ -80,7 +83,7 @@
 					myparents.style.opacity = 0;
 					var img = new Image();
 					//img.src = "img/back/back (" + ((backnum - 1) == 0?40:(backnum - 1)).toString() + ").jpg";
-					img = imagelist[(backnum - 1) == 0?40:(backnum - 1)];
+					img = imagelist[(backnum - 1) == 0?imagelist.length - 1:(backnum - 1)];
 					// 确定图片加载完成后再进行背景图片切换
 					
 					
@@ -152,7 +155,7 @@
 			//}
 			op = 0;
 			mytmpOBJ = shouye;
-			if (backnum == 40)
+			if (backnum == imagelist.length - 1)
 				backnum = 0;
 			backnum++;
 		}
@@ -259,7 +262,7 @@
 				<div class="cleft_top">
 					<div class="cleft_topbg">
 						<div class="cleftbg_img">
-							<img src="img/tx.jpg" alt="头像">
+							<img src="https://pic.imgdb.cn/item/62f092b316f2c2beb19b85d1.jpg" alt="头像">
 							
 					</div>
 					</div>
@@ -312,7 +315,7 @@
 							<p>QQ:329125460</p>
 							<p>邮箱:329125460@qq.com</p>
 						</div>
-						<img src="img/mylogo.png" alt="头像" style="width: 150px;height: 70px;position: absolute;vertical-align: bottom;bottom: 20px;right: 15px">
+						<img src="https://pic.imgdb.cn/item/62f095d016f2c2beb1a9530a.png" alt="头像" style="width: 150px;height: 70px;position: absolute;vertical-align: bottom;bottom: 20px;right: 15px">
 						<!--<div class="nav01_fpw">
 							<h5>期末倒计时: &nbsp;</h5>
 							<h5 id="myt"></h5>
@@ -335,7 +338,7 @@
 					<div class="nav02_kj" style="height: 600px;">
 						<h3>😁站/长/资/料</h3>
 						<div class="nav02_grzl_headimg">
-							<img src="img/tx.jpg" alt="[头像]">
+							<img src="https://pic.imgdb.cn/item/62f092b316f2c2beb19b85d1.jpg" alt="[头像]">
 							<a href="mailto:329125460@qq.com" target="_blank" rel="noopener noreferrer">联系站长</a>
 						</div>
 						<div class="nav02_grzl_txt">
@@ -436,7 +439,7 @@
 						<img src="img/cnmteam03.png" alt="[组织者]">
 						<img src="img/cnmteam04.png" alt="[组织者]">
 						<img src="img/cnmteam05.png" alt="[组织者]">-->
-						<img src="img/tx.jpg" alt="[组织者]">
+						<img src="https://pic.imgdb.cn/item/62f092b316f2c2beb19b85d1.jpg" alt="[组织者]">
 					</div>
 				</div>
 
@@ -1243,7 +1246,7 @@
 					<p>我们是黑暗中照亮书本的明灯，光明下抒写思绪的墨笔。</p>
 				</div>
 				<div class="exnav03_team">
-					<img src="img/tx.jpg" alt="[组织者]" />
+					<img src="https://pic.imgdb.cn/item/62f092b316f2c2beb19b85d1.jpg" alt="[组织者]" />
 				</div>
 			</div>
 			<!-- NO4-商业合作 -->
