@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgb(0, 0, 0);display: block;margin: 8px;">
+    <p style="text-align: center;color:white;font-size:50px">
+        <a id="a_sg"></a>
+    </p>
+
+
+    <video id="v_url" style="    
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+    object-fit: contain;
+    overflow-clip-margin: content-box;
+    overflow: clip;" controls="" autoplay="auto" name="media" __idm_id__="4808705">
+        
+    </video>
+    <script>
+        var jobj = GetRequest();
+        var lab = document.getElementById('a_sg');
+        var vedio = document.getElementById('v_url');
+        //3.把数据写入div中
+        var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
+        httpRequest.open('GET', 'https://ovooa.caonm.net/API/QQ_Music/?mid=' + jobj['mid'] + '&br=' + jobj['br'], true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
+
+        httpRequest.onreadystatechange = function () {
+            if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                var json = httpRequest.responseText;//获取到json字符串，还需解析
+                console.log(json);
+                var songjobj = JSON.parse(json);
+                var sname = songjobj['data']['song'];
+                var ssinger = songjobj['data']['singer'];
+                var salbum = songjobj['data']['album'];
+                var surl = songjobj['data']['music'];
+                lab.innerHTML = sname + ' - ' + ssinger + ' - ' + salbum;
+                vedio.innerHTML = '<source src="' + surl + '" type="audio/mpeg">'
+                
+            }
+        };
+        httpRequest.send();
+        function GetRequest() {
+
+            const url = location.search; //获取url中"?"符后的字串
+            let theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                let str = url.substr(1);
+                strs = str.split("&");
+                for (let i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                }
+            }
+            return theRequest;
+        }
+    </script>
+</body>
+
+</html>
