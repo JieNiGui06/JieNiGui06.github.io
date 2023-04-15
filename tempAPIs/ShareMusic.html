@@ -26,7 +26,7 @@
     object-fit: contain;
     overflow-clip-margin: content-box;
     overflow: clip;" controls="" autoplay="auto" name="media" __idm_id__="4808705">
-        
+
     </video>
     <script>
         var jobj = GetRequest();
@@ -34,23 +34,34 @@
         var vedio = document.getElementById('v_url');
         //3.把数据写入div中
         var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
-        httpRequest.open('GET', 'https://ovooa.caonm.net/API/QQ_Music/?mid=' + jobj['mid'] + '&br=' + jobj['br'], true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
+        var bshs = ['ovooa.caonm.net', 'ovooa.muban.plus'];
+        var time = 0;
+        function sethttpmsg() {
+            httpRequest.open('GET', 'https://' + bsh[time] + '/API/QQ_Music/?mid=' + jobj['mid'] + '&br=' + jobj['br'], true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
 
-        httpRequest.onreadystatechange = function () {
-            if (httpRequest.readyState == 4 && httpRequest.status == 200) {
-                var json = httpRequest.responseText;//获取到json字符串，还需解析
-                console.log(json);
-                var songjobj = JSON.parse(json);
-                var sname = songjobj['data']['song'];
-                var ssinger = songjobj['data']['singer'];
-                var salbum = songjobj['data']['album'];
-                var surl = songjobj['data']['music'];
-                lab.innerHTML = sname + ' - ' + ssinger + ' - ' + salbum;
-                vedio.innerHTML = '<source src="' + surl + '" type="audio/mpeg">'
-                
-            }
-        };
-        httpRequest.send();
+            httpRequest.onreadystatechange = function () {
+                if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                    var json = httpRequest.responseText;//获取到json字符串，还需解析
+                    console.log(json);
+                    var songjobj = JSON.parse(json);
+                    var sname = songjobj['data']['song'];
+                    var ssinger = songjobj['data']['singer'];
+                    var salbum = songjobj['data']['album'];
+                    var surl = songjobj['data']['music'];
+                    lab.innerHTML = sname + ' - ' + ssinger + ' - ' + salbum;
+                    vedio.innerHTML = '<source src="' + surl + '" type="audio/mpeg">'
+
+                }
+                else {
+                    if (time == bshs.length - 1)
+                        return;
+                    time++;
+                    sethttpmsg();
+                }
+            };
+
+            httpRequest.send();
+        }
         function GetRequest() {
 
             const url = location.search; //获取url中"?"符后的字串
