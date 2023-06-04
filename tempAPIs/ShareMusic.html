@@ -33,13 +33,13 @@
         var lab = document.getElementById('a_sg');
         var vedio = document.getElementById('v_url');
         //3.把数据写入div中
-        var bshs = ['ovooa.caonm.net', 'ovooa.muban.plus'];
+        var bshs = ['https://api.caonm.net/api/qqyy/qq.php','https://ovooa.caonm.net/API/QQ_Music', 'https://ovooa.muban.plus/API/QQ_Music'];
         var time = 0;
         console.log(bshs[0]);
         sethttpmsg();
         function sethttpmsg() {
             var httpRequest = new XMLHttpRequest();
-            httpRequest.open('GET', 'https://' + bshs[time] + '/API/QQ_Music/?mid=' + jobj['mid'] + '&br=' + jobj['br'], true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
+            httpRequest.open('GET', bshs[time] + '?mid=' + jobj['mid'] + '&br=' + jobj['br'], true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
             httpRequest.send();
             httpRequest.onreadystatechange = function () {
                 if (httpRequest.readyState == 4 && httpRequest.status == 200) {
