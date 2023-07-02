@@ -33,21 +33,29 @@
         var lab = document.getElementById('a_sg');
         var vedio = document.getElementById('v_url');
         //3.把数据写入div中
-        var bshs = ['https://api.caonm.net/api/qqyy/qq.php','https://ovooa.caonm.net/API/QQ_Music', 'https://ovooa.muban.plus/API/QQ_Music'];
+        var bshs = ['https://api.f4team.cn/API/QQ_Music/','https://api.f4team.cn/API/QQ_Music_new/','https://ovooa.caonm.net/API/QQ_Music/'];
+        var brs = {1:[14,11,8,4]}
         var time = 0;
         console.log(bshs[0]);
         sethttpmsg();
         function sethttpmsg() {
             var httpRequest = new XMLHttpRequest();
-            httpRequest.open('GET', bshs[time] + '?mid=' + jobj['mid'] + '&br=' + jobj['br'], true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
+            var tbr = jobj['br'];
+            if (brs.hasOwnProperty(time))
+                tbr = brs[time][tbr-1];
+            console.log(tbr);
+            httpRequest.open('GET', bshs[time] + '?mid=' + jobj['mid'] + '&br=' + String(tbr), true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
             httpRequest.send();
             httpRequest.onreadystatechange = function () {
                 if (httpRequest.readyState == 4 && httpRequest.status == 200) {
                     var json = httpRequest.responseText;//获取到json字符串，还需解析
+
                     console.log(json);
+                    var a = time;
+                    console.log(a);
                     var songjobj = JSON.parse(json);
                     var sname = songjobj['data']['song'];
-                    var ssinger = songjobj['data']['singer'];
+                    var ssinger = songjobj['data']['singers'].join('/');
                     var salbum = songjobj['data']['album'];
                     var surl = songjobj['data']['music'];
                     if (surl == '') {
