@@ -33,16 +33,17 @@
         var lab = document.getElementById('a_sg');
         var vedio = document.getElementById('v_url');
         //3.把数据写入div中
-        var bshs = ['https://api.f4team.cn/API/QQ_Music/','https://api.f4team.cn/API/QQ_Music_new/','https://ovooa.caonm.net/API/QQ_Music/'];
-        var brs = {1:[14,11,8,4]}
+        var bshs = ['https://api.xingzhige.com/API/QQmusicVIP_new/'];
+        var brs = {0:[14,11,8,4]}
         var time = 0;
         console.log(bshs[0]);
         sethttpmsg();
         function sethttpmsg() {
             var httpRequest = new XMLHttpRequest();
-            var tbr = jobj['br'];
+            var tbr = jobj['br'] ?? '3';
+            var ttbr = tbr-1;
             if (brs.hasOwnProperty(time))
-                tbr = brs[time][tbr-1];
+                tbr = brs[time][ttbr<0?2:ttbr];
             console.log(tbr);
             httpRequest.open('GET', bshs[time] + '?mid=' + jobj['mid'] + '&br=' + String(tbr), true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
             httpRequest.send();
